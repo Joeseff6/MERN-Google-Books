@@ -11,6 +11,12 @@ function LoginForm() {
         <input type="password" className="form-control" id="floatingPasswordLogin" placeholder="Password" />
         <label for="floatingPasswordLogin">Password</label>
       </div>
+      <button 
+      className="btn d-block m-auto mt-3" 
+      type="submit"
+      >
+        Submit
+      </button>
     </>
   )
 }
