@@ -23,7 +23,7 @@ function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg mb-3">
       <Link className="navbar-brand px-3" to="/">
-        Joseph's Portfolio
+      <i className="fas fa-book-reader"> MERN Google Books</i>
             </Link>
       <button
         className="navbar-toggler mx-3"
@@ -42,24 +42,20 @@ function Navbar() {
         <ul className="navbar-nav mr-auto mx-3">
           <li className={cn('nav-item', { 'active': location.pathname === '/' })}>
             <Link to="/" className="nav-link">
-              About Me
+              Home
             </Link>
           </li>
-          <li className={cn('nav-item', { 'active': location.pathname === '/projects' })}>
-            <Link to="/projects" className="nav-link">
-              Projects
+          <li className={cn('nav-item', { 'active': location.pathname === '/search' })}>
+            <Link to="/search" className="nav-link">
+              Search
             </Link>
           </li>
-          <li className={cn('nav-item', { 'active': location.pathname === '/portfolio' })}>
-            <Link to="/portfolio" className="nav-link">
-              Portfolio
+          <li className={cn('nav-item', { 'active': location.pathname === '/saved' })}>
+            <Link to="/saved" className="nav-link">
+              Saved
             </Link>
           </li>
-          <li className={cn('nav-item', { 'active': location.pathname === '/contact' })}>
-            <Link to="/contact" className="nav-link">
-              Contact Me
-            </Link>
-          </li>
+
         </ul>
       </div>
     </nav>
