@@ -29,8 +29,10 @@
   },
   "homepage": "https://github.com/Joeseff6/MERN-Google-Books#readme",
   "dependencies": {
+    "bcrypt": "^5.0.1",
     "classnames": "^2.3.1",
     "express": "^4.17.1",
+    "express-session": "^1.17.1",
     "if-env": "^1.0.4",
     "mongoose": "^5.12.7"
   }
