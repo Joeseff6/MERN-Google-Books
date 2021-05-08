@@ -17,14 +17,14 @@ function Navbar() {
       } else {
         setNavClassNames(['collapse', 'navbar-collapse']);
       }
-    },100)
+    }, 100)
   };
 
   return (
     <nav className="navbar navbar-expand-lg mb-3">
-      <Link className="navbar-brand px-3" to="/">
-      <i className="fas fa-book-reader"> MERN Google Books</i>
-            </Link>
+      <span className="navbar-brand px-3">
+        <i className="fas fa-book-reader"> MERN Google Books</i>
+      </span>
       <button
         className="navbar-toggler mx-3"
         type="button"
@@ -40,11 +40,6 @@ function Navbar() {
 
       <div className={cn(navClassNames)} id="navbarSupportedContent">
         <ul className="navbar-nav mr-auto mx-3">
-          <li className={cn('nav-item', { 'active': location.pathname === '/' })}>
-            <Link to="/" className="nav-link">
-              Home
-            </Link>
-          </li>
           <li className={cn('nav-item', { 'active': location.pathname === '/search' })}>
             <Link to="/search" className="nav-link">
               Search
@@ -55,7 +50,11 @@ function Navbar() {
               Saved
             </Link>
           </li>
-
+          <li className={cn('nav-item', { 'active': location.pathname === '/saved' })}>
+              <a className="nav-link">
+                Logout
+              </a>
+          </li>
         </ul>
       </div>
     </nav>
