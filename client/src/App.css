@@ -36,6 +36,8 @@ nav, .footer, .btn {
 #signUpContainer {
   border-left: dotted black 2px;
   border-radius: 15px;
+}
 
-
+.error {
+  color: #F02719;
 }
