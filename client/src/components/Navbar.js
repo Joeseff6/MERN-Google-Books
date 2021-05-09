@@ -1,12 +1,17 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import cn from 'classnames';
-
+import API from '../utils/API';
 
 function Navbar() {
   const [showNav, setShowNav] = useState(false);
   const [navClassNames, setNavClassNames] = useState(['collapse', 'navbar-collapse'])
   const location = useLocation();
+
+  const handleLogout = () => {
+    API.logout();
+    window.location.pathname = "/";
+  }
 
   const handleToggle = () => {
     setNavClassNames(['navbar-collapse', 'collapsing'], { show: showNav });
@@ -51,7 +56,7 @@ function Navbar() {
             </Link>
           </li>
           <li className={cn('nav-item', { 'active': location.pathname === '/saved' })}>
-              <a className="nav-link">
+              <a onClick={handleLogout} className="nav-link">
                 Logout
               </a>
           </li>
