@@ -15,7 +15,7 @@ body {
   text-align: center;
 }
 
-nav, .footer, .btn {
+nav, .footer, .btn, .bookCard {
   background-color: #85D6A0;
   border: #143D22 dotted 2px;
 }
@@ -40,4 +40,8 @@ nav, .footer, .btn {
 
 .error {
   color: #F02719;
+}
+
+#searchInput {
+  border-radius: 10px;
 }
