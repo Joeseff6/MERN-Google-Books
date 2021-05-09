@@ -1,24 +1,13 @@
+const axios = require("axios");
+
 const API = {
-  login: async function() {
-    const response = await fetch("/api/users/login", {
-      method: "POST",
-      headers: {
-        'Content-Type': 'application/json'
-      }
-    });
-    return response.json();
+  login: function(body) {
+    return axios.post("/api/users/login", {data: body})
   },
 
-  signUp: async function() {
-    const response = await fetch("https://localhost:3001/api/users/", {
-      method: "POST",
-      headers: {
-        'Content-Type': 'application/json'
-      }
-    });
-    return response.json();
+  signUp: function(body) {
+    return axios.post("/api/users", {data: body});
   }
-
 };
 
 module.exports = API
