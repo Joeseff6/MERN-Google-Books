@@ -14,7 +14,6 @@ function App() {
         <Routes>
           <Route element={<Welcome />}>
             <Route path="/" element={<Home />} />
-
           </Route>
           <Route element={<Main />}>
             <Route path="/search" element={<Search />} />
