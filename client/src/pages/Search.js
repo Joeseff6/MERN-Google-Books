@@ -27,12 +27,12 @@ function Search() {
   return (
     <>
       <Header heading="Search Page" />
-      <form className="mb-5">
+      <form className="mb-3">
         <input
           className="d-block m-auto mb-3 col-6"
           type="text"
           id="searchInput"
-          placeholder="Enter book name, author, etc."
+          placeholder="Enter book name"
           onChange={handleChange}
         />
         <button 
@@ -43,6 +43,7 @@ function Search() {
           Search
         </button>
       </form>
+      <h3 className="text-center">Results found: {results.length}</h3>
       <Card books={results}/>
     </>
   );
