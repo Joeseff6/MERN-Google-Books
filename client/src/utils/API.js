@@ -16,7 +16,7 @@ const API = {
   getBooks: function(query) {
     const splitQuery = query.split(" ");
     const joinQuery = splitQuery.join("%20");
-    return axios.get(`https://www.googleapis.com/books/v1/volumes?q=${joinQuery}&maxResults=10&orderBy=relevance`);
+    return axios.get(`https://www.googleapis.com/books/v1/volumes?q=${joinQuery}&maxResults=10&orderBy=relevance&printType=books`);
   }
 };
 
