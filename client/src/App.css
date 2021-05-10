@@ -45,3 +45,23 @@ nav, .footer, .btn, .bookCard {
 #searchInput {
   border-radius: 10px;
 }
+
+img {
+  width: 170px;
+  height: 210px;
+  background-color: #38A85E;
+  border: black 1px dotted;
+}
+
+.bookInfo {
+  font-size: small;
+}
+
+.titleRow {
+  background-color: #38A85E;
+  border-bottom: black 2px solid;
+}
+
+.partition-left {
+  border-right: black dotted 2px
+}
