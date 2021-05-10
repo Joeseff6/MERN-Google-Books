@@ -29,7 +29,7 @@ function Search() {
       <Header heading="Search Page" />
       <form className="mb-3">
         <input
-          className="d-block m-auto mb-3 col-6"
+          className="d-block m-auto mb-3 col-6 text-capitalize"
           type="text"
           id="searchInput"
           placeholder="Enter book name"
@@ -43,7 +43,7 @@ function Search() {
           Search
         </button>
       </form>
-      <h3 className="text-center">Results found: {results.length}</h3>
+      <h3 className="text-center">Results found: {results.length > 0 ? results.length : "Please submit search"}</h3>
       <Card books={results}/>
     </>
   );
