@@ -65,3 +65,15 @@ img {
 .partition-left {
   border-right: black dotted 2px
 }
+
+.saveMessage {
+  position: fixed;
+  bottom: 75vh;
+  right: 30px;
+  width: 400px;
+  height: 75px;
+  border: solid yellow 2px;
+  text-align: center;
+  padding-top: 20px;
+  margin: auto;
+}
