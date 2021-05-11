@@ -1,11 +1,9 @@
 import { useState, useEffect } from 'react';
 import API from '../utils/API';
-
 import Header from "../components/Header";
-import Card from "../components/Card";
+import SearchCard from "../components/Cards/SearchCard";
 
 function Search() {
-  const [search,setSearch] = useState("");
   const [value,setValue] = useState("");
   const [results,setResults] = useState([]);
 
@@ -15,13 +13,14 @@ function Search() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const {data} = await API.getBooks(search);
+    document.getElementById('searchInput').value = "";
+    const {data} = await API.getBooks(value);
     console.log(data.items);
-    setResults(data.items)
+    setResults(data.items);
   };
 
   useEffect(() => {
-    setSearch(value)
+    setValue(value);
   },[value])
 
   return (
@@ -44,7 +43,7 @@ function Search() {
         </button>
       </form>
       <h3 className="text-center">Results found: {results.length > 0 ? results.length : "Please submit search"}</h3>
-      <Card books={results}/>
+      <SearchCard books={results}/>
     </>
   );
 }
