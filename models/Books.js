@@ -1,34 +1,37 @@
 const mongoose = require("mongoose");
-const {Schema} = mongoose;
+const { Schema } = mongoose;
 
 const BookSchema = new Schema({
-  name: {
+  title: {
     type: String,
   },
   author: {
-    type: String
+    type: String,
   },
-  year: {
-    type: Number
+  yearPublished: {
+    type: String,
   },
-  abstract: {
-    type: String
+  textSnippet: {
+    type: String,
   },
   pageCount: {
-    type: Number
+    type: Number,
   },
   link: {
+    type: String,
+  },
+  image: {
     type: String
   },
   dateAdded: {
     type: Date,
-    default: Date.now()
+    default: Date.now(),
   },
   user: {
     type: Schema.Types.ObjectId,
     ref: "User",
   },
-})
+});
 
 const Books = mongoose.model("Books", BookSchema);
 
