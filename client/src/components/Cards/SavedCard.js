@@ -32,7 +32,7 @@ function SavedCard(props) {
                 <div className="row">
                   <div className="col">
                     <span>
-                      Author: {book.author ? book.author[0] : "No authors"}
+                      Author: {book.author ? book.author : "No authors"}
                     </span>
                   </div>
                   <div className="col">
