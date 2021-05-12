@@ -2,7 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const routes = require("./routes");
 const app = express();
-require('dotenv').config();
+const path = require("path");
 
 
 const PORT = process.env.PORT || 3001;
@@ -25,7 +25,16 @@ if (process.env.NODE_ENV === "production") {
 
 app.use(routes);
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/merngooglebooks");
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'));
+});
+
+
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/merngooglebooks", {
+  useUnifiedTopology: true,
+  useNewUrlParser: true,
+  useFindAndModify: false,
+});
 
 app.listen(PORT, function() {
   console.log(`API server now listening on PORT ${PORT}.`);
