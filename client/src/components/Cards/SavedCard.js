@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import API from "../../utils/API";
 
 function SavedCard(props) {
