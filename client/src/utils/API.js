@@ -28,8 +28,8 @@ const API = {
   },
 
   deleteBook: function(id) {
-    return axios.delete("api/books/" + id)
+    return axios.delete("api/books/" + id);
   }
 };
 
-module.exports = API
+module.exports = API;
