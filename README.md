@@ -4,7 +4,7 @@
 A React web application used to search for books using the Google Books API, as well as save data to MongoDB through CRUD operations.
 ## Link to Deployed Application 🔗
 
-_https://whispering-springs-93162.herokuapp.com/_
+_https://my-mern-google-books.herokuapp.com_
 
 ## Table of Contents
 
